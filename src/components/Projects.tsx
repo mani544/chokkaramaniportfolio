@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     title: "AtliQ Hotels Demand Intelligence",
     category: "Analytics",
-    thumbnail: "/netflix.png",
+    thumbnail: "/Hotels.png",
     focus: "Revenue & demand decision systems",
     description:
       "An end-to-end analytics pipeline uncovering booking behavior, seasonality, and revenue drivers to support executive-level hospitality decisions.",
@@ -38,7 +38,7 @@ const projects: Project[] = [
   {
     title: "AtliQ Hardware Financial Intelligence",
     category: "Analytics",
-    thumbnail: "/netflix.png",
+    thumbnail: "/hardware.png",
     focus: "Profitability & performance modeling",
     description:
       "A business intelligence system analyzing financial performance, cost structures, and sales optimization opportunities through structured reporting.",
@@ -48,7 +48,7 @@ const projects: Project[] = [
   {
     title: "AI Restaurant Concept Generator",
     category: "AI",
-    thumbnail: "/netflix.png",
+    thumbnail: "/image.png",
     focus: "LLM-powered concept generation",
     description:
       "A generative AI system that produces restaurant names and menus using LangChain and Gemini, designed as a modular experimentation layer for LLM workflows.",
