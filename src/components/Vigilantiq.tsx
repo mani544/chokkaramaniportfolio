@@ -4,7 +4,7 @@ import { ShieldAlert, Network, Layers, Activity } from "lucide-react";
 const Vigilantiq = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
-  // ESC to close modal
+  // ESC key close
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setActiveImage(null);
@@ -13,12 +13,12 @@ const Vigilantiq = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
- return (
+  return (
     <section
       id="vigilantiq"
       className="relative py-20 bg-gradient-to-b from-[#020617] to-black overflow-hidden"
     >
-      {/* Ambient Background */}
+      {/* AMBIENT BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0EA5A4]/10 blur-[120px] rounded-full" />
         <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-[#38BDF8]/10 blur-[120px] rounded-full" />
@@ -48,10 +48,68 @@ const Vigilantiq = () => {
           </div>
 
           <p className="mt-6 max-w-3xl mx-auto text-lg text-[#94A3B8]">
-            Intelligent risk & anomaly detection platform built for high-volume
-            transactional systems in real time.
+            An intelligent risk & anomaly detection platform designed to monitor,
+            analyze, and respond to high-volume transactional systems in real time.
           </p>
         </div>
+
+        {/* PROBLEM */}
+        <div className="max-w-5xl mx-auto mb-24">
+          <h3 className="text-2xl font-semibold text-[#E5E7EB] mb-4">
+            The Problem We’re Solving
+          </h3>
+          <p className="text-[#94A3B8] leading-relaxed text-lg">
+            Modern financial systems operate at massive scale, yet risk detection
+            is often reactive and fragmented. Vigilantiq shifts this paradigm —
+            from static monitoring to adaptive, intelligent vigilance.
+          </p>
+        </div>
+
+        {/* ARCHITECTURE LAYERS */}
+        <div className="mb-24">
+          <h3 className="text-2xl font-semibold text-[#E5E7EB] mb-10 text-center">
+            System Architecture (Conceptual)
+          </h3>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Ingestion Layer",
+                desc: "High-throughput streaming & batch ingestion.",
+                icon: <Network />,
+              },
+              {
+                title: "Processing Core",
+                desc: "Normalization, enrichment, feature pipelines.",
+                icon: <Layers />,
+              },
+              {
+                title: "Intelligence Layer",
+                desc: "Anomaly detection & adaptive risk scoring.",
+                icon: <Activity />,
+              },
+              {
+                title: "Decision Layer",
+                desc: "Dashboards, alerts & integrations.",
+                icon: <ShieldAlert />,
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:translate-y-[-6px] transition-all duration-500"
+              >
+                <div className="mb-4 text-[#0EA5A4]">{item.icon}</div>
+                <h4 className="text-lg font-semibold text-[#E5E7EB] mb-3">
+                  {item.title}
+                </h4>
+                <p className="text-[#94A3B8] text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
 
         {/* MONITOR GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
