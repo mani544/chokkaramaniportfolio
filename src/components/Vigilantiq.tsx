@@ -13,12 +13,45 @@ const Vigilantiq = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
-  return (
+ return (
     <section
       id="vigilantiq"
       className="relative py-20 bg-gradient-to-b from-[#020617] to-black overflow-hidden"
     >
+      {/* Ambient Background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0EA5A4]/10 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-[#38BDF8]/10 blur-[120px] rounded-full" />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-6">
+
+        {/* INTRO */}
+        <div className="text-center mb-24">
+          <p className="text-sm font-bold uppercase tracking-widest text-[#0EA5A4] mb-4">
+            Startup Initiative
+          </p>
+
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#E5E7EB]">
+            VIGILANTIQ
+          </h2>
+
+          <div className="flex justify-center mt-6 mb-6">
+            <div className="relative group">
+              <div className="absolute inset-0 rounded-full bg-[#0EA5A4]/20 blur-2xl opacity-60 group-hover:opacity-80 transition duration-500" />
+              <img
+                src="/VIGILANTIQ_LOGO.png"
+                alt="Vigilantiq Logo"
+                className="relative w-28 h-28 object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          </div>
+
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-[#94A3B8]">
+            Intelligent risk & anomaly detection platform built for high-volume
+            transactional systems in real time.
+          </p>
+        </div>
 
         {/* MONITOR GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
